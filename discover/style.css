@@ -100,11 +100,18 @@ porém, para centralizar, o inline aceita text-align  -  o block não aceita tex
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
 }
 
 .light #switch button {
-    right: 0;
-    left: initialF;
+   /* right: 0;
+    left: initialF; */
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -198,5 +205,27 @@ footer {
 
     .light {
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from {
+        left: 0
+    }
+
+    to { 
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
     }
 }
