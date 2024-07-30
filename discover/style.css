@@ -51,7 +51,8 @@ body * {
 
 
 #container  {
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
 }
@@ -102,7 +103,7 @@ porém, para centralizar, o inline aceita text-align  -  o block não aceita tex
 
 .light #switch button {
     right: 0;
-    left: initial;
+    left: initialF;
 }
 
 #switch span {
